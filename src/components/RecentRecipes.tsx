@@ -1,5 +1,5 @@
 import { useState,useEffect } from 'react';
-import supabase from '../utils/supabase.ts'; //상대경로로 수정
+import { supabase } from '../utils/supabase.ts';
 
 type RecipeResult = {
   id: number;
