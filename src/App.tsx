@@ -59,6 +59,7 @@ function App() {
         setLoading(false);
         return;
       }
+      /*
       const data: RecipeResult | ErrorResponse = await response.json();
 
       if ('error' in data) {
@@ -66,6 +67,11 @@ function App() {
       } else {
         setResult(data);
       }
+      */
+     // 여기부터는 성공 응답만 온다고 가정
+      const data = (await response.json()) as RecipeResult;
+      setResult(data);
+      
     } catch (error) {
       alert('An unexpected error occurred.');
       console.log(error);
